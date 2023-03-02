@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  min-height: 100vh;
+  background-image: url("./images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: center bottom;
+  background-color: hsl(229deg, 57%, 11%);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url("./images/bg-mobile.png");
+    background-size: 100% 100%;
+  }
+}
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 900px;
+}
+body main #uploader {
+  flex-grow: 1;
+  flex-basis: 300px;
+  background-color: hsl(228deg, 56%, 26%);
+  padding: 2rem;
+  border-radius: 8px;
+  border-top-right-radius: 100px;
+}
+body main #uploader #brand {
+  margin-bottom: 2rem;
+}
+body main #uploader #controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+body main #uploader #controls button {
+  background-color: hsl(229deg, 57%, 11%);
+  border: none;
+  outline: none;
+  padding: 1em;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+body main #usage {
+  flex-grow: 1;
+  flex-basis: 500px;
+  background-color: hsl(228deg, 56%, 26%);
+  border-radius: 8px;
+  padding: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body main #usage .usage-body {
+  position: relative;
+}
+body main #usage .usage-body .tootip {
+  background-color: white;
+  position: absolute;
+  right: 0px;
+  top: -80%;
+  color: black;
+  padding: 1rem;
+  border-radius: 8px;
+  border-bottom-right-radius: 0;
+}
+body main #usage .usage-body .tootip::after {
+  content: "";
+  border-style: solid;
+  border-width: 10px;
+  border-color: white white transparent transparent;
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+@media screen and (max-width: 375px) {
+  body main #usage .usage-body .tootip::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  body main #usage .usage-body .tootip {
+    top: 100%;
+    transform: translateX(-50%);
+    border-bottom-right-radius: 8px;
+  }
+}
+body main #usage .usage-body .progressbar {
+  margin-top: 10px;
+}
+body main #usage .usage-body .progressbar .track {
+  border-radius: 1000000000px;
+  background-color: hsl(229deg, 57%, 11%);
+  padding: 4px;
+}
+body main #usage .usage-body .progressbar .track .fill {
+  border-radius: inherit;
+  background: linear-gradient(to right, hsl(6deg, 100%, 80%), hsl(335deg, 100%, 65%));
+  display: flex;
+  flex-direction: row-reverse;
+  width: min(100%, max(18px, 81.5%));
+  padding: inherit;
+}
+body main #usage .usage-body .progressbar .track .fill .head {
+  width: 5px;
+  height: 5px;
+  border-radius: inherit;
+  background-color: white;
+}
+body main #usage .usage-body .progressbar .info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=output.css.map */
